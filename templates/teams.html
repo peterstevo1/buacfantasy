@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Submitted Teams</title>
-</head>
-<body>
-  <h2>Submitted Fantasy Teams</h2>
-
-  {% if teams %}
-    <ul>
-      {% for team in teams %}
-        <li>
-          <strong>{{ team.name }}</strong>:
-          {{ team.runner1 }},
-          {{ team.runner2 }},
-          {{ team.runner3 }},
-          {{ team.runner4 }},
-          {{ team.runner5 }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No teams submitted yet.</p>
-  {% endif %}
-</body>
-</html>
+<h2>Submitted Teams</h2>
+<ul>
+{% for team in teams %}
+  <li><strong>{{ team.name }}</strong>:
+    {{ team.runner1 }}, {{ team.runner2 }}, {{ team.runner3 }}, {{ team.runner4 }}, {{ team.runner5 }}
+  </li>
+{% endfor %}
+</ul>
