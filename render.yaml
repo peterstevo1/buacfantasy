@@ -3,4 +3,5 @@ services:
     name: fantasy-xc
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    startCommand: "gunicorn buacfantasy.app:app"
+
