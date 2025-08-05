@@ -34,3 +34,10 @@ def submit():
 
         return redirect('/')
     return render_template('submit.html')
+
+@app.route('/teams')
+def view_teams():
+    with open('data.json', 'r') as f:
+        data = json.load(f)
+    return render_template('teams.html', teams=data)
+
