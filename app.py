@@ -27,10 +27,6 @@ class Team(db.Model):
     runner4 = db.Column(db.String(100))
     runner5 = db.Column(db.String(100))
 
-# Directly create tables at startup
-with app.app_context():
-    db.create_all()
-
 # Routes
 @app.route('/')
 def index():
