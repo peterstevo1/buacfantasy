@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submitted Teams</title>
+</head>
+<body>
+  <h2>Submitted Fantasy Teams</h2>
+  {% if teams %}
+    <ul>
+      {% for team in teams %}
+        <li><strong>{{ team.name }}</strong>: {{ team.team | join(', ') }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No teams submitted yet.</p>
+  {% endif %}
+</body>
+</html>
