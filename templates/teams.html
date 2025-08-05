@@ -6,10 +6,18 @@
 </head>
 <body>
   <h2>Submitted Fantasy Teams</h2>
+
   {% if teams %}
     <ul>
       {% for team in teams %}
-        <li><strong>{{ team.name }}</strong>: {{ team.team | join(', ') }}</li>
+        <li>
+          <strong>{{ team.name }}</strong>:
+          {{ team.runner1 }},
+          {{ team.runner2 }},
+          {{ team.runner3 }},
+          {{ team.runner4 }},
+          {{ team.runner5 }}
+        </li>
       {% endfor %}
     </ul>
   {% else %}
